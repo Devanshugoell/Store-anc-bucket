@@ -1,0 +1,9 @@
+<h2>Bucket</h2>
+
+<ul>
+  <li *ngFor="let item of itemService.bucketItems; let i = index">
+    {{ item }}
+    <button (click)="moveToStore(i)">Move to Store</button>
+    <button (click)="remove(i)">Remove</button>
+  </li>
+</ul>

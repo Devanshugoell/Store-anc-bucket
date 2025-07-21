@@ -1,0 +1,11 @@
+<h2>Store</h2>
+<input [(ngModel)]="newItem" placeholder="Add item" />
+<button (click)="addItem()">Add</button>
+
+<ul>
+  <li *ngFor="let item of itemService.storeItems; let i = index">
+    {{ item }}
+    <button (click)="moveToBucket(i)">Move to Bucket</button>
+    <button (click)="remove(i)">Remove</button>
+  </li>
+</ul>
