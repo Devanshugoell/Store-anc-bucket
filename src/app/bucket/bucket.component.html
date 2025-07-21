@@ -1,9 +1,24 @@
-<h2>Bucket</h2>
+<div class="text-center border min-h-96 min-w-96 rounded-lg mt-4">
+  <h2 class="text-3xl my-4">Bucket</h2>
 
-<ul>
-  <li *ngFor="let item of itemService.bucketItems; let i = index">
-    {{ item }}
-    <button (click)="moveToStore(i)">Move to Store</button>
-    <button (click)="remove(i)">Remove</button>
-  </li>
-</ul>
+  <ul>
+    <li
+      *ngFor="let item of itemService.bucketItems; let i = index"
+      class="list-none my-3"
+    >
+      {{ item }}
+      <button
+        (click)="moveToStore(i)"
+        class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+      >
+        Move to Store
+      </button>
+      <button
+        (click)="remove(i)"
+        class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded"
+      >
+        Remove
+      </button>
+    </li>
+  </ul>
+</div>

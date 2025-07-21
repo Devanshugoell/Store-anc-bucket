@@ -1,11 +1,35 @@
-<h2>Store</h2>
-<input [(ngModel)]="newItem" placeholder="Add item" />
-<button (click)="addItem()">Add</button>
+<div class="text-center border min-h-96 min-w-96 rounded-lg mt-4">
+  <h2 class="text-3xl my-4">Store</h2>
+  <input
+    [(ngModel)]="newItem"
+    placeholder="Add item"
+    class="p-2 border border-black rounded mx-4"
+  />
+  <button
+    (click)="addItem()"
+    class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+  >
+    Add
+  </button>
 
-<ul>
-  <li *ngFor="let item of itemService.storeItems; let i = index">
-    {{ item }}
-    <button (click)="moveToBucket(i)">Move to Bucket</button>
-    <button (click)="remove(i)">Remove</button>
-  </li>
-</ul>
+  <ul>
+    <li
+      *ngFor="let item of itemService.storeItems; let i = index"
+      class="list-none my-3"
+    >
+      {{ item }}
+      <button
+        (click)="moveToBucket(i)"
+        class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+      >
+        Move to Bucket
+      </button>
+      <button
+        (click)="remove(i)"
+        class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded"
+      >
+        Remove
+      </button>
+    </li>
+  </ul>
+</div>
